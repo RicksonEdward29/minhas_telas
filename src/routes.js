@@ -21,7 +21,6 @@ export default function Routes(){
                 tabBarStyle:{
                     paddingBottom:5,
                     paddingTop:5,
-
                 }
             }}
         >

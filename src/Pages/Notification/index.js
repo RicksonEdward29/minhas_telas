@@ -1,70 +1,67 @@
 import React from 'react';
 import { SafeAreaView, Text, View, StyleSheet, TouchableOpacity,  } from 'react-native';
-import Icon from   'react-native-vector-icons/Feather'
-
+import { AntDesign, Entypo } from '@expo/vector-icons';
 
 export default function Notification() {
     return(
         <SafeAreaView style={StyleSheet.container}>
-        <View style={styles.espacoSup}>
-            <Text style={styles.texto}>CARREFOUR</Text>
-            <Icon style={styles.icone} name="arrow-left-circle" size={30} color="#32CD32"></Icon>
-            <Icon style={styles.icone1} name="shopping-cart" size={25} color="#F0FFF0"></Icon>
-            <TouchableOpacity style={styles.button1} onPress={() => {}}>
+        <View style={styles.spaceHigher}>
+            <Text style={styles.text}>CARREFOUR</Text>
+            <AntDesign style={styles.iconArrow} name="arrowleft" size={30} color="#32CD32" />
+            <AntDesign style={styles.iconCart} name="shoppingcart" size={25} color="#F0FFF0" />
+            <TouchableOpacity style={styles.buttonHigher} onPress={() => {}}>
                     <Text style={{fontSize: 20, color: 'white',}}>12 | R$ 209,84</Text>
             </TouchableOpacity>
-        <View style={StyleSheet.sup}>
-            <Text style={Superior.texto3}>Pagamento na entrega</Text>
-            <Icon style={Superior.icone04} name="credit-card" size={20} color="green"></Icon>
-            <Text style={Superior.texto4}>Cartão de Débito ou Crédito</Text>
-            <Icon style={Superior.icone05} name="dollar-sign" size={20} color="black"></Icon>
-            <Text style={Superior.texto5}>Dinheiro</Text>
-            <View style={Superior.linha1}></View>
-            <Text style={Superior.texto6}>Pagamento pelo aplicativo</Text>
-            <Text style={Superior.texto7}>Cartão de Débito ou Crédito</Text>
-            <Icon style={Superior.icone07} name="credit-card" size={20} color="green"></Icon>
-            <View style={Superior.linha2}></View>
-            <Text style={Superior.texto8}>Endereço de entrega:</Text>
-            <Icon style={Superior.icone09} name="map-pin" size={20} color="black"></Icon>
-            <Text adjustsFontSizeToFit={true} style={Superior.texto9}>
+        <View>
+            <Text style={styles.textPay}>Pagamento na entrega</Text>
+            <AntDesign style={styles.iconCredit} name="creditcard" size={24} color="green" />
+            <Text style={{fontSize: 20, color: "#32CD32", left: 55, top: 15,}}>Cartão de Débito ou Crédito</Text>
+            <AntDesign style={styles.iconBarcode} name="barcode" size={24} color="black" />
+            <Text style={styles.textMoney}>Dinheiro</Text>
+            <View style={styles.lineHigher}></View>
+            <Text style={styles.textPayapp}>Pagamento pelo aplicativo</Text>
+            <Text style={styles.textCard}>Cartão de Débito ou Crédito</Text>
+            <AntDesign style={styles.iconCredit} name="creditcard" size={24} color="green" />
+            <View style={styles.lineMidle}></View>
+            <Text style={styles.textDelivery}>Endereço de entrega:</Text>
+            <Entypo style={styles.iconMap} name="location-pin" size={24} color="#32CD32" />
+            <Text  style={styles.textAdress}>
             R. Padre Anchieta, 226 - Mercês, Curitiba - PR, 80430-060
             </Text>
-            <Text style={Superior.texto10}>Editar</Text>
-            <View style={Superior.linha3}></View>
-            <Text style={Superior.texto11}>Tempo de entrega:</Text>
-            <Text style={Superior.texto12}>60 minutos</Text>
-            <TouchableOpacity style={Superior.button2} onPress={() => {}}>
+            <Text style={styles.textEdit}>Editar</Text>
+            <View style={styles.lineDown}></View>
+            <Text style={styles.textTimedelivery}>Tempo de entrega:</Text>
+            <Text style={styles.textMinutes}>60 minutos</Text>
+            <TouchableOpacity style={styles.buttonDown} onPress={() => {}}>
                     <Text style={{fontSize: 25, color: 'white', top: 10,}}>Finalizar pedido</Text>
             </TouchableOpacity>
         </View>
-            <View style={Superior.quadrado}></View>
+            <View style={styles.quadrado}></View>
             </View>  
         </SafeAreaView>
     );
 }
-
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        alignItems:'center',
-        
+        alignItems:'center',   
     },
-    espacoSup:{
+    spaceHigher:{
         width: 500,
         height: 100,
         backgroundColor: '#363636',
     },
-    texto:{
+    text:{
         fontSize: 20,
         color:"white",
         left: 140,
         top: 10,
     },
-    icone:{
+    iconArrow:{
         top: -20,
         left: 10,
     },
-    button1:{
+    buttonHigher:{
         alignItems:'center',
         backgroundColor:'#32CD32',
         paddingBottom: 0,
@@ -74,137 +71,113 @@ const styles = StyleSheet.create({
         borderRadius: 20,
     },
     textoButton:{
-        
         backgroundColor:'white',
     },
-    icone1:{
+    iconCart:{
         left: 10,
         top: 0,
-    }
-    
-    
-
-});
-
-const Superior = StyleSheet.create({
-    sup:{
-        
-        width: 500,
-        height: 100,
-        backgroundColor: "black",
     },
-    
-    texto3:{
+    textPay:{
         fontSize: 20,
         color:"#C0C0C0",
         left: 15,
         top: 10,
     },
-    icone04:{
+    iconCredit:{
         top: 45,
         left: 15,
     },
-    texto4:{
+    textCard:{
         fontSize: 20,
-        color:"#32CD32",
+        color:"blue",
         left: 55,
-        top: 20,
+        top: 25,
     },
-    icone05:{
+    iconBarcode:{
         top: 45,
         left: 15,
     },
-    texto5:{
+    textMoney:{
         fontSize: 20,
         color:"#32CD32",
         left: 55,
-        top: 20,
-        
+        top: 20,   
     },
-    linha1:{
+    lineHigher:{
         width: 500,
         height: 2,
         top: 35,
         backgroundColor:'grey',
     },
-    texto6:{
+    textPayapp:{
         fontSize: 20,
         color:"#C0C0C0",
         left: 15,
         top: 50,
     },
-    icone07:{
+    iconCredit:{
         top: 40,
         left: 15,
     },
-    texto7:{
+    textCard:{
         fontSize: 20,
         color:"#32CD32",
         left: 55,
         top: 65,
     },
-    linha2:{
+    lineMidle:{
         width: 500,
         height: 2,
         top: 65,
         backgroundColor:'grey',
     },
-    texto8:{
+    textDelivery:{
         fontSize: 20,
         color:"#C0C0C0",
         left: 15,
         top: 75,
     },
-    icone09:{
+    iconMap:{
         top: 50,
-        left: 300,
-        
+        left: 300,  
     },
-    texto9:{
+    textAdress:{
         fontSize: 15,
         color:"#32CD32",
         left: 15,
-        top: 70,
-        
-        
-        
+        top: 70,  
     },
-    texto10:{
+    textEdit:{
         fontSize: 20,
         top: 2,
         left: 330,
         color:'#32CD32',
     },
-    linha3:{
+    lineDown:{
         width: 500,
         height: 2,
         top: 95,
         backgroundColor:'grey',
     },
-    texto11:{
+    textTimedelivery:{
         fontSize: 20,
         color:"#C0C0C0",
         left: 15,
         top: 110,
     },
-    texto12:{
+    textMinutes:{
         fontSize: 20,
         color:"#C0C0C0",
         left: 210,
         top: 82,
     },
-    button2:{
+    buttonDown:{
         alignItems:'center',
         backgroundColor:'#32CD32',
         paddingBottom: 20,
         width: 300,
-        top: 110,
+        top: 90,
         left: 50,
         borderRadius: 15,
     }
-    
-
-
-})
-
-
+});
