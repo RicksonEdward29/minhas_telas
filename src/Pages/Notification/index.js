@@ -1,30 +1,30 @@
 import React from 'react';
 import { SafeAreaView, Text, View, StyleSheet, TouchableOpacity,  } from 'react-native';
-import { AntDesign, Entypo } from '@expo/vector-icons';
+import { AntDesign, MaterialIcons } from '@expo/vector-icons';
 
 export default function Notification() {
     return(
         <SafeAreaView style={StyleSheet.container}>
         <View style={styles.spaceHigher}>
             <Text style={styles.text}>CARREFOUR</Text>
-            <AntDesign style={styles.iconArrow} name="arrowleft" size={30} color="#32CD32" />
-            <AntDesign style={styles.iconCart} name="shoppingcart" size={25} color="#F0FFF0" />
+            <AntDesign style={styles.iconArrow} name="arrowleft" size={30} color="#1FC730" />
+            <MaterialIcons style={styles.iconCart} name="shopping-cart" size={25} color="#F0FFF0" />
             <TouchableOpacity style={styles.buttonHigher} onPress={() => {}}>
                     <Text style={{fontSize: 20, color: 'white',}}>12 | R$ 209,84</Text>
             </TouchableOpacity>
         <View>
             <Text style={styles.textPay}>Pagamento na entrega</Text>
-            <AntDesign style={styles.iconCredit} name="creditcard" size={24} color="green" />
-            <Text style={{fontSize: 20, color: "#32CD32", left: 55, top: 15,}}>Cartão de Débito ou Crédito</Text>
-            <AntDesign style={styles.iconBarcode} name="barcode" size={24} color="black" />
+            <MaterialIcons style={styles.iconCredit} name="credit-card" size={25} color="#1FC730" />
+            <Text style={{fontSize: 20, color: "#1FC730", left: 55, top: 15,}}>Cartão de Débito ou Crédito</Text>
+            <MaterialIcons style={styles.iconPayments} name="payments" size={25} color="#1FC730" />
             <Text style={styles.textMoney}>Dinheiro</Text>
             <View style={styles.lineHigher}></View>
             <Text style={styles.textPayapp}>Pagamento pelo aplicativo</Text>
             <Text style={styles.textCard}>Cartão de Débito ou Crédito</Text>
-            <AntDesign style={styles.iconCredit} name="creditcard" size={24} color="green" />
+            <MaterialIcons style={styles.iconCredit} name="credit-card" size={25} color="#1FC730" />
             <View style={styles.lineMidle}></View>
             <Text style={styles.textDelivery}>Endereço de entrega:</Text>
-            <Entypo style={styles.iconMap} name="location-pin" size={24} color="#32CD32" />
+            <MaterialIcons style={styles.iconMap} name="my-location" size={24} color="#1FC730" />
             <Text  style={styles.textAdress}>
             R. Padre Anchieta, 226 - Mercês, Curitiba - PR, 80430-060
             </Text>
@@ -37,7 +37,7 @@ export default function Notification() {
             </TouchableOpacity>
         </View>
             <View style={styles.quadrado}></View>
-            </View>  
+        </View>  
         </SafeAreaView>
     );
 }
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     },
     buttonHigher:{
         alignItems:'center',
-        backgroundColor:'#32CD32',
+        backgroundColor:'#1FC730',
         paddingBottom: 0,
         width: 180,
         top: -25,
@@ -93,15 +93,15 @@ const styles = StyleSheet.create({
         left: 55,
         top: 25,
     },
-    iconBarcode:{
+    iconPayments:{
         top: 45,
         left: 15,
     },
     textMoney:{
         fontSize: 20,
-        color:"#32CD32",
+        color:"#1FC730",
         left: 55,
-        top: 20,   
+        top: 15,   
     },
     lineHigher:{
         width: 500,
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     },
     textCard:{
         fontSize: 20,
-        color:"#32CD32",
+        color:"#1FC730",
         left: 55,
         top: 65,
     },
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     },
     textAdress:{
         fontSize: 15,
-        color:"#32CD32",
+        color:"#1FC730",
         left: 15,
         top: 70,  
     },
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         top: 2,
         left: 330,
-        color:'#32CD32',
+        color:'#1FC730',
     },
     lineDown:{
         width: 500,
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
     },
     buttonDown:{
         alignItems:'center',
-        backgroundColor:'#32CD32',
+        backgroundColor:'#1FC730',
         paddingBottom: 20,
         width: 300,
         top: 90,
